@@ -4,10 +4,22 @@ exports.seed = function(knex) {
     .del()
     .then(function () {
       return knex('users').insert([
-        {user_name: 'Joao'},
-        {user_name: 'Marcio'},
-        {user_name: 'Maria'},
-        {user_name: 'Ana'},
+        {
+          user_name: 'Joao',
+          email: 'joao@gmail.com'
+        },
+        {
+          user_name: 'Marcio',
+          email: 'marcio@gmail.com'
+        },
+        {
+          user_name: 'Maria',
+          email: 'maria@gmail.com'
+        },
+        {
+          user_name: 'Ana',
+          email: 'ana@gmail.com'
+        },
       ]);
     });
 };

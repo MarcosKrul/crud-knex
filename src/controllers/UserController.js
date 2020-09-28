@@ -7,9 +7,10 @@ module.exports = {
     },
     async create(req, res, next) {
         try {
-            const { user_name } = req.body
+            const { user_name, email } = req.body
             await knex('users').insert({
-                user_name
+                user_name,
+                email
             })
             return res.status(201).send()
         } catch (error) {

@@ -15,6 +15,7 @@ module.exports = {
                 query.where({ user_id })
                      .join('users', 'users.id', '=', 'projects.user_id')
                      .select('projects.*', 'users.user_name', 'users.email')
+                     .where('users.deleted_at', null)
                 countObject.where({ user_id })
             }
 
